@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router';
 import {ref} from "vue";
-import {login} from '@/mock/user';
+import {login} from '@/mock/userLogin';
 
 
 const router = useRouter()
@@ -13,9 +13,9 @@ function onSubmit() {
   const {success,user,message} = login(username.value,passwd.value);
 
   if (success) {
-    console.log('登录成功，角色：', user.role);
+    console.log('登录成功，角色：', user?.role);
     // 根据用户角色进行权限控制
-    switch (user.role) {
+    switch (user?.role) {
       case '普通用户':
         router.push("/worker");
         break;

@@ -1,11 +1,19 @@
-const users = [
+import type { User } from '@/models/user'
+
+interface Response {
+    success: boolean;
+    message?: string;
+    user?: User;
+}
+
+const users: User[] = [
     { username: 'xjq', role: '普通用户' },
     { username: 'xjq1', role: '主任' },
     { username: 'xjq2', role: '厂长' },
     { username: 'admin', role: '管理员' }
 ];
 
-export const login = (username: string, password: string) => {
+export const login = (username: string, password: string): Response => {
     const user = users.find(user => user.username === username);
 
     if (!user) {
