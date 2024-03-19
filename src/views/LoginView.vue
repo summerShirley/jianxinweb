@@ -1,76 +1,64 @@
 <script setup lang="ts">
-import LoginForm from "@/components/LoginForm.vue";
-
-
-
+import LoginForm from '@/components/LoginForm.vue'
 </script>
 
 <template>
-<div id="all">
-
-  <div id="login_wrapper">
-    <!--  系统标题-->
-    <div id="title">
-      <p class="title_one">建新化工</p>
-      <p class="title_two">生产流程管理平台</p>
-      <p class="title_three">Cangzhou Jianxin Group Chemical Production Process Management Platform</p>
+  <div id="all">
+    <div class="l_wrapper">
+      <div class="title_group">
+        <p class="title_one">建新化工</p>
+        <p class="title_two">生产流程管理平台</p>
+        <p class="title_three">Cangzhou Jianxin Group Chemical Production Process Management Platform</p>
+      </div>
     </div>
 
-    <!--  登录表单-->
-    <div>
-      <LoginForm/>
+    <div class="r_wrapper">
+      <LoginForm />
     </div>
   </div>
-</div>
 </template>
 
 <style scoped>
+#all {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
 
-#all{
-  background-image: url("src/assets/login.jpeg");
-  width: 100%;
-  min-width: 1800px;
-  height: 100%;
+    background-image: url("src/assets/login.jpeg");
+    background-size: cover;
+    background-position: center;
 }
 
-#login_wrapper{
-  width: 100%;
-  min-width: 1800px;
-  height: 100%;
-  padding: 0 0 0 180px;
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
+.l_wrapper {
+    flex: 2;
 }
 
-#title{
-  width: fit-content;
-  min-width: 800px;
-  height: 500px;
-  padding: 270px 0;
+.r_wrapper {
+    flex: 1;
+    background-color: #fff;
 }
 
-.title_one{
-  line-height: 150px;
-  font-size: 150px;
-  color: white;
-  letter-spacing: 5px;
-  font-weight: lighter;
+.title_group {
+    padding: 25vh 0 0 10vw;
 }
 
-.title_two{
-  line-height: 130px;
-  font-size: 90px;
-  color: white;
-  letter-spacing: 5px;
-  font-weight: lighter;
+.title_one, .title_two, .title_three {
+    color: #fff;
+    font-weight: lighter;
+    line-height: 0;
 }
 
-.title_three{
-  line-height: 30px;
-  font-size: 19px;
-  letter-spacing: 2px;
-  color: #a4a4a4;
-  font-weight: lighter;
+.title_one {
+    font-size: 7vw;
+}
+
+.title_two {
+    font-size: 5vw;
+}
+
+.title_three {
+    color: #a4a4a4;
+    font-size: 1vw;
+    letter-spacing: .1vw;
 }
 </style>

@@ -54,7 +54,11 @@ function onSubmit() {
         </el-form-item>
 
         <el-form-item>
-          <el-button type="primary" @click="onSubmit">登录</el-button>
+          <el-button
+              type="primary"
+              style="width: 100%; margin-top: 2vh"
+              @click="onSubmit"
+          >登录</el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -63,38 +67,15 @@ function onSubmit() {
 </template>
 
 <style scoped>
-#form{
-  background: white;
-  width: 550px;
-  min-width: 500px;
-  height: 100%;
+#form {
+    padding: 25vh 5vw;
 }
 
 #form_title{
-  font-size: 40px;
-  color: black;
-  text-align: center;
-  letter-spacing: 4px;
-  padding-top: 200px;
-  font-family: "YY";
-}
-
-#form_wrapper{
-  width: 100%;
-  height: fit-content;
-  padding: 50px 100px;
-}
-
-.el-form{
-  width: 350px;
-}
-
-.el-form-item{
-  margin-bottom: 40px;
-}
-
-.el-button{
-  margin-top: 10px;
-  width: 100%;
+    padding: 2vw;
+    font-size: 40px;
+    font-family: "YY", serif;
+    text-align: center;
+    letter-spacing: .3vw;
 }
 </style>
